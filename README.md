@@ -38,9 +38,6 @@ Also place a copy of the Whoops library in your Vendor folder.
 # git clone git@github.com:filp/whoops.git
 ```
 
-Please note that if you do a manual install, you will need to place an autoloader (like the [PSR-4 autoloader](http://www.php-fig.org/psr/psr-4/)) in `app/Vendor/autoload.php`.
-Otherwise, the Whoops classes won't be properly loaded.
-
 Configuration
 -------------
 
