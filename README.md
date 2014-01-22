@@ -49,7 +49,7 @@ CakePlugin::load('CakeWhoops', array('bootstrap' => true));
 
 That is all you need to get the plugin up and running! Whoops will now be your default exception handler.
 
-Optionally, you can change the minimum debug level required before the Whoops libary kicks in.
+Optionally, you can change the minimum debug level required before the Whoops library kicks in.
 By default, Whoops shows full stack traces and code excerpts. This is awesome for debugging, but not meant for your end users.
 Therefor, the plugin by default requires at least a CakePHP debug level of 1, anything lower will be passed on to the default ErrorHandler.
 If you are certain you want to adjust the minimum level, you can adjust the `$minDebugLevel` value in the `Lib/Error/WhoopsExceptionHandler.php` file.
