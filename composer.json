@@ -1,5 +1,5 @@
 {
-	"name": "oldskool/cake-whoops",
+	"name": "oldskool/whoops-cakephp",
 	"type": "cakephp-plugin",
 	"description": "Integrates the Whoops library into CakePHP",
 	"homepage": "https://github.com/oldskool/CakeWhoops",
