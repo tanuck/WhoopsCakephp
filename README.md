@@ -18,7 +18,7 @@ The easiest way to install the Plugin is by using [Composer](https://getcomposer
 The Plugin is available through the Packagist website. To install using composer, simply run:
 
 ```
-php composer.phar require oldskool/cake-whoops:dev-master
+php composer.phar require oldskool/whoops-cakephp:dev-master
 ```
 
 **Manual**
@@ -27,7 +27,7 @@ To manually install the plugin, clone the repository into your `app/Plugin` dire
 
 ```
 # cd app/Plugin
-# git clone git@github.com:oldskool/CakeWhoops.git
+# git clone git@github.com:oldskool/WhoopsCakephp.git
 ```
 
 Also place a copy of the Whoops library in your Vendor folder.
@@ -44,7 +44,7 @@ Configuration
 Load the plugin by adding the following line to `app/Config/bootstrap.php`:
 
 ```php
-CakePlugin::load('CakeWhoops', array('bootstrap' => true));
+CakePlugin::load('WhoopsCakephp', array('bootstrap' => true));
 ```
 
 That is all you need to get the plugin up and running! Whoops will now be your default exception handler.
