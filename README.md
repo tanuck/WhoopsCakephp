@@ -1,7 +1,7 @@
-CakeWhoops
-==========
+WhoopsCakephp
+=============
 
-This plugin integrates the Whoops library into CakePHP.
+This plugin integrates the Whoops library into your CakePHP application.
 
 Requirements
 ------------
@@ -12,7 +12,7 @@ Requirements
 Installation
 ------------
 
-**Using Composer (recommended)**
+### Using Composer (recommended)
 
 The easiest way to install the Plugin is by using [Composer](https://getcomposer.org/).
 The Plugin is available through the Packagist website. To install using composer, simply run:
@@ -21,7 +21,7 @@ The Plugin is available through the Packagist website. To install using composer
 php composer.phar require oldskool/whoops-cakephp:dev-master
 ```
 
-**Manual**
+### Manual
 
 To manually install the plugin, clone the repository into your `app/Plugin` directory:
 
