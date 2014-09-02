@@ -48,6 +48,7 @@ CakePlugin::load('WhoopsCakephp', array('bootstrap' => true));
 ```
 
 That is all you need to get the plugin up and running! Whoops will now be your default exception handler.
+Make sure that you load the plugin at the bottom of your bootstrap, at least after the `Exception` Configuration key is defined (the Plugin should override the `handler` key of the `Exception` configuration key).
 
 Optionally, you can change the minimum debug level required before the Whoops library kicks in.
 By default, Whoops shows full stack traces and code excerpts. This is awesome for debugging, but not meant for your end users.
