@@ -12,8 +12,7 @@ App::import('Vendor', 'filp/whoops/src/Whoops/Handler/PrettyPageHandler');
  * Exceptions will then be shown on a "Pretty Page", including the code excerpt
  * where the Exception was thrown along with an interactive stack trace.
  *
- * @author Jan Dorsman, ODC Engineering <jan.dorsman@odc-engineering.nl>
- * @copyright Copyright (c) 2014, ODC Engineering
+ * @author Jan Dorsman
  * @license http://opensource.org/licenses/MIT The MIT License (MIT)
  */
 class WhoopsExceptionHandler {
