@@ -1,11 +1,14 @@
 <?php
 App::import('Vendor', 'filp/whoops/src/Whoops/Run');
+App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Formatter');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Frame');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/FrameCollection');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Inspector');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/HandlerInterface');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/Handler');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/PrettyPageHandler');
+App::import('Vendor', 'filp/whoops/src/Whoops/Util/Misc');
+App::import('Vendor', 'filp/whoops/src/Whoops/Util/TemplateHelper');
 
 /**
  * The WhoopsErrorHandler will pass our errors to the Whoops library.
