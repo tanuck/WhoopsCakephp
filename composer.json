@@ -6,8 +6,12 @@
 	"license": "MIT",
 	"version": "2.0.0",
 	"require": {
+		"composer/installers": "*",
 		"cakephp/cakephp": "3.0.*-dev",
 		"filp/whoops": "1.*"
+	},
+	"extra": {
+		"installer-name": "WhoopsCakephp"
 	},
 	"autoload": {
 		"psr-4": {
