@@ -1,11 +1,17 @@
 {
 	"name": "oldskool/whoops-cakephp",
 	"type": "cakephp-plugin",
-	"description": "Integrates the Whoops library into CakePHP",
+	"description": "Integrates the Whoops library into a CakePHP 3.x application",
 	"homepage": "https://github.com/oldskool/CakeWhoops",
 	"license": "MIT",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"require": {
+		"cakephp/cakephp": "3.0.*-dev",
 		"filp/whoops": "1.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"WhoopsCakephp": "src/"
+		}
 	}
 }
