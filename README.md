@@ -64,4 +64,4 @@ if ($isCli) {
 }
 ```
 
-If you want to use Whoops all the time, regardless of the debug setting of the application (not recommended), just replace the original `(new ErrorHandler(Configure::consume('Error')))->register();` with `(new WhoopsErrorHandler())->register();`. Please note that this will enable Whoops for all your end users, includign the stack traces and such. So be very cautious with this and only use it when you're very sure!
+If you want to use Whoops all the time, regardless of the debug setting of the application (not recommended), just replace the original `(new ErrorHandler(Configure::consume('Error')))->register();` with `(new WhoopsErrorHandler())->register();`. Please note that this will enable Whoops for all your end users, including the stack traces and such. So be very cautious with this and only use it when you're very sure!
