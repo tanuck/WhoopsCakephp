@@ -6,6 +6,7 @@
 	"license": "MIT",
 	"version": "1.0.0",
 	"require": {
-		"filp/whoops": "1.*"
+		"filp/whoops": "1.*",
+		"composer/installers": "*"
 	}
 }
