@@ -1,5 +1,6 @@
 <?php
 App::import('Vendor', 'filp/whoops/src/Whoops/Run');
+App::import('Vendor', 'filp/whoops/src/Whoops/Exception/ErrorException');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Formatter');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Frame');
 App::import('Vendor', 'filp/whoops/src/Whoops/Exception/FrameCollection');
