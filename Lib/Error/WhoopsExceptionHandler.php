@@ -8,6 +8,7 @@ App::import('Vendor', 'filp/whoops/src/Whoops/Exception/Inspector');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/HandlerInterface');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/Handler');
 App::import('Vendor', 'filp/whoops/src/Whoops/Handler/PrettyPageHandler');
+App::import('Vendor', 'filp/whoops/src/Whoops/Handler/JsonResponseHandler');
 App::import('Vendor', 'filp/whoops/src/Whoops/Util/Misc');
 App::import('Vendor', 'filp/whoops/src/Whoops/Util/TemplateHelper');
 
@@ -43,8 +44,13 @@ class WhoopsExceptionHandler {
 		// Verify if the debug level is at least the minDebugLevel
 		if (Configure::read('debug') >= self::$minDebugLevel) {
 			// Debug level is high enough, use the Whoops handler
+
+			// If ajax request, use the JsonResponseHandler. Revert to PrettyPageHandler for all other requests.
+			$handlerName = (Router::getRequest(true)->is('ajax')) ? 'JsonResponseHandler' : 'PrettyPageHandler';
+			$namespacePath = "\\Whoops\\Handler\\{$handlerName}";
+			
 			$Whoops = new Whoops\Run();
-			$Whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
+			$Whoops->pushHandler(new $namespacePath());
 			$Whoops->handleException($exception);
 		} else {
 			// Debug level is too low, fall back to CakePHP default ErrorHandler
