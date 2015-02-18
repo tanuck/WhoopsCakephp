@@ -6,7 +6,7 @@ This plugin integrates the Whoops library into your CakePHP application.
 Requirements
 ------------
 
-* CakePHP 2.x
+* CakePHP 2.x (for the CakePHP 3.x version, [click here](https://github.com/oldskool/WhoopsCakephp/tree/cake3))
 * The actual [Whoops library](http://filp.github.io/whoops/) (automatically installed along with the plugin if Composer is used)
 
 Installation
