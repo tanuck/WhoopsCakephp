@@ -22,46 +22,27 @@ php composer.phar require oldskool/whoops-cakephp:dev-cake3
 Configuration
 -------------
 
-In order to start using Whoops as your error handler, you'll need to adjust your `config/bootstrap.php` file.
+In order to start using Whoops as your error handler, you'll need to adjust your `config/app.php` file and have it load the Plugin.
 
-In your `config/bootstrap.php`, find the "use" statements at the top and append it with:
-
-```php
-use WhoopsCakephp\Error\WhoopsErrorHandler;
-```
-
-Next, find this bit:
-
-```php
-if ($isCli) {
-	(new ConsoleErrorHandler(Configure::consume('Error')))->register();
-} else {
-	(new ErrorHandler(Configure::consume('Error')))->register();
-}
-```
-
-Replace the content of the else clause with this:
+Find this bit of code:
 
 ```php
 if (Configure::read('debug')) {
-	(new WhoopsErrorHandler())->register();
-} else {
-	(new ErrorHandler(Configure::consume('Error')))->register();
+	Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 ```
 
-This will set Whoops as the error and exception handler when debug mode is enabled. So all put together it should then look like:
+And replace it with this:
 
 ```php
-if ($isCli) {
-	(new ConsoleErrorHandler(Configure::consume('Error')))->register();
-} else {
-	if (Configure::read('debug')) {
-		(new WhoopsErrorHandler())->register();
-	} else {
-		(new ErrorHandler(Configure::consume('Error')))->register();
-	}
+if (Configure::read('debug')) {
+    Plugin::load('DebugKit', ['bootstrap' => true]);
+    Plugin::load('WhoopsCakephp', ['bootstrap' => true]);
 }
 ```
 
-If you want to use Whoops all the time, regardless of the debug setting of the application (not recommended), just replace the original `(new ErrorHandler(Configure::consume('Error')))->register();` with `(new WhoopsErrorHandler())->register();`. Please note that this will enable Whoops for all your end users, including the stack traces and such. So be very cautious with this and only use it when you're very sure!
+If you want to use Whoops all the time, regardless of the debug setting of the application (not recommended),
+then just add the line `Plugin::load('WhoopsCakephp', ['bootstrap' => true]);` anywhere outside the if-statement.
+
+Please note that this will enable Whoops for all your end users, including the stack traces and such.
+So be very cautious with this and only use it when you're very sure!
