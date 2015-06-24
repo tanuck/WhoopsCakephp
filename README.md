@@ -18,7 +18,7 @@ The easiest way to install the Plugin is by using [Composer](https://getcomposer
 The Plugin is available through the Packagist website. To install using composer, simply run:
 
 ```
-php composer.phar require oldskool/whoops-cakephp:dev-master
+php composer.phar require oldskool/whoops-cakephp:dev-cake2
 ```
 
 ### Manual
